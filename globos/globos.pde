@@ -48,7 +48,7 @@ void setup()
 
 void draw()
 {
-  background(75,155,225);
+  background(75,155,155);
   image(cara,0,0);
   for(int i=0;i<globos.size();i++)
   {
