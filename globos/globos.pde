@@ -21,7 +21,8 @@ class Globo
   void dibujate()
   {
       fill(c);
-      ellipse(x,y,100,100);
+      rectMode(CENTER);
+      rect(x,y,80,100);
       imageMode(CENTER);
       image(cara,x,y,70,90);
       
