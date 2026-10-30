@@ -1,3 +1,4 @@
+PImage cara;
 class Globo
 {
   float x, y,vx,vy;
@@ -20,7 +21,10 @@ class Globo
   void dibujate()
   {
       fill(c);
-      ellipse(x,y,60,100);
+      ellipse(x,y,100,100);
+      imageMode(CENTER);
+      image(cara,x,y,70,90);
+      
   }
   
 }
@@ -30,13 +34,17 @@ ArrayList<Globo> globos;
 
 void setup()
 {
-  size(1000,1000);
-  globos = new ArrayList<Globo>();  
+  //size(1000,1000);
+  size(640,480);
+  globos = new ArrayList<Globo>();
+  cara = loadImage("donalnd.png");
+  image(cara,0,0);
 }
 
 void draw()
 {
   background(75,155,225);
+  image(cara,0,0);
   for(int i=0;i<globos.size();i++)
   {
     globos.get(i).update();
